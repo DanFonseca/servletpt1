@@ -1,10 +1,4 @@
 
-    
-    <%
-    	String msgStatus = (String) request.getAttribute("msgStatus");
-    
-    %>
-
 <html>
 <head>
 
@@ -12,7 +6,7 @@
 </head>
 <body>
 
-<h1>Empresa <%= msgStatus %> cadastrada com sucesso</h1>
+<h1>Empresa ${ msgStatus } cadastrada com sucesso</h1>
 
 
 </body>

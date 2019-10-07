@@ -2,6 +2,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.com.servlets.Empresa"%>
 <%@page import="java.util.List"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 
 <html>
 <head>
@@ -9,19 +10,14 @@
 <title>Empresas:</title>
 </head>
 <body>
-<ul>
-
-<%
- List <Empresa> listEmpresa = (List<Empresa>) request.getAttribute("listaEmpresas");
-	for (Empresa empresa : listEmpresa){
-		%>
-		<li> <%= empresa.getNomeEmpresa() %> </li>
-		<%
-	}
-
-%>
-
-</ul>
+	<ul>
+	
+		<c:forEach  var="lista" items="${listaEmpresas}">
+		<li> ${lista.nomeEmpresa}</li>
+		</c:forEach>
+	
+	
+	</ul>
 
 </body>
 </html>
